@@ -1,0 +1,7 @@
+{
+  "name": "lidom-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
