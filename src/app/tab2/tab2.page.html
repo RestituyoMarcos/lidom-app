@@ -1,17 +1,106 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Posiciones
     </ion-title>
+    <ion-label slot="center">Noticia</ion-label>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row class="row-header">
+          <ion-col>
+            Posición
+          </ion-col>
+          <ion-col size="2">
+            Equipo
+          </ion-col>
+          <ion-col>
+            Ganados
+          </ion-col>
+          <ion-col>
+            Perdidos
+          </ion-col>
+          <ion-col>
+            DIF
+          </ion-col>
+          <ion-col>
+            GC
+          </ion-col>
+          <ion-col>
+            EO
+          </ion-col>
+          <ion-col>
+            LE
+          </ion-col>
+          <ion-col>
+            TL
+          </ion-col>
+          <ion-col>
+            AC
+          </ion-col>
+          <ion-col>
+            TE
+          </ion-col>
+          <ion-col>
+            PCT
+          </ion-col>
+          <ion-col>
+            CASA
+          </ion-col>
+          <ion-col>
+            RUTA
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let equipo of posiciones">
+          <ion-col>
+            {{equipo.ID}}
+          </ion-col>
+          <ion-col size="2">
+            {{equipo.Equipo}}
+          </ion-col>
+          <ion-col>
+            {{equipo.G}}
+          </ion-col>
+          <ion-col>
+            {{equipo.P}}
+          </ion-col>
+          <ion-col>
+            {{equipo.DIF}}
+          </ion-col>
+          <ion-col>
+            {{equipo.GC}}
+          </ion-col>
+          <ion-col>
+            {{equipo.EO}}
+          </ion-col>
+          <ion-col>
+            {{equipo.LE}}
+          </ion-col>
+          <ion-col>
+            {{equipo.TL}}
+          </ion-col>
+          <ion-col>
+            {{equipo.AC}}
+          </ion-col>
+          <ion-col>
+            {{equipo.TE}}
+          </ion-col>
+          <ion-col>
+            {{equipo.PCT}}
+          </ion-col>
+          <ion-col>
+            {{equipo.CASA}}
+          </ion-col>
+          <ion-col>
+            {{equipo.RUTA}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <app-explore-container name="Lidom - Posiciones"></app-explore-container>
 </ion-content>
