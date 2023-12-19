@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Equipos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let equipo of equipos">
+      <ion-avatar item-start>
+        <img src="{{equipo.imagen}}" alt="{{equipo.nombre}}">
+      </ion-avatar>
+      <h3>{{equipo.nombre}}</h3>
+      <p>{{equipo.abreviatura}}</p>
+    </ion-item>
+  </ion-list>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <app-explore-container name="Lidom - Equipos"></app-explore-container>
 </ion-content>
