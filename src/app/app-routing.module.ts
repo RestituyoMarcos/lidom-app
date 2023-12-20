@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'lidom/noticia/:id',
     loadChildren: () => import('./noticia/noticia.module').then( m => m.NoticiaPageModule)
+  },
+  {
+    path: 'lidom/equipo/:id',
+    loadChildren: () => import('./equipo/equipo.module').then( m => m.EquipoPageModule)
   }
 ];
 @NgModule({

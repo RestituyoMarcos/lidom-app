@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Equipo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/lidom/equipos"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="container" *ngIf="equipo">
+    <ion-card>
+      <img
+        alt="{{equipo.nombre}}"
+        src="{{equipo.imagen}}"
+      />
+      <ion-card-header>
+        <ion-card-title>{{equipo.nombre}}</ion-card-title>
+        <ion-card-subtitle>{{equipo.equipo_local}}</ion-card-subtitle>
+      </ion-card-header>
+  
+      <ion-card-content>{{equipo.localidad + " - " + equipo.conocido_como}}</ion-card-content>
+      <div class="detalles">
+        <ul>
+          <li><b>Arquitecto: </b> {{equipo.arquitecto}}</li>
+          <li><b>Inauguración: </b> {{equipo.inauguracion}}</li>
+          <li><b>Remodelación: </b> {{equipo.remodelacion}}</li>
+          <li><b>Ampliación: </b> {{equipo.ampliacion}}</li>
+          <li><b>Capacidad: </b> {{equipo.capacidad}}</li>
+          <li><b>Dimensiones</b> 
+            <ul>
+              <li><b>Left Field: </b> {{equipo.dimensiones.left_field}}</li>
+              <li><b>Center Field: </b> {{equipo.dimensiones.center_field}}</li>
+              <li><b>Right Field: </b> {{equipo.dimensiones.right_field}}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ion-card>
+  </div>
+  
+</ion-content>

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  equipos = []
+  equipos: Array<any> = []
 
   constructor(
     private http: HttpClient
